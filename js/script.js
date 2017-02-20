@@ -12,10 +12,19 @@ form.addEventListener('submit', (e) => {
   updateHTML();
 });
 
+memo_container.addEventListener('dblclick',(e) => {
+    if(!e.target.matches('div.panel-heading')) return; // skip this unless it's an input
+    const el = e.target.parentNode;
+    const index = el.dataset.index;
+    notes.splice(index,1);
+    localStorage.setItem('notes', JSON.stringify(notes));
+    updateHTML();
+});
+
 function updateHTML() {
   memo_container.innerHTML = notes.map((note, i) => {
       return `
-        <div class="panel panel-default" id="note_${i}">
+        <div class="panel panel-default" data-index="${i}" id="note_${i}">
           <div class="panel-heading">${note.title}</div>
           <p class="panel-body">${note.desc}</p>
         </div>
