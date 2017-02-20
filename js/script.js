@@ -11,6 +11,7 @@ form.addEventListener('submit', (e) => {
   notes.push(item);
   localStorage.setItem('notes',JSON.stringify(notes)); //immediately save changes to localStrage
   updateHTML();
+  form.reset();
 });
 
 memo_container.addEventListener('dblclick',(e) => {
