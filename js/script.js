@@ -15,9 +15,9 @@ form.addEventListener('submit', (e) => {
 function updateHTML() {
   memo_container.innerHTML = notes.map((note, i) => {
       return `
-        <div class="default" id="note_${i}">
-          <h2>${note.title}</h2>
-          <p>${note.desc}</p>
+        <div class="panel panel-default" id="note_${i}">
+          <div class="panel-heading">${note.title}</div>
+          <p class="panel-body">${note.desc}</p>
         </div>
       `;
     }).join('');

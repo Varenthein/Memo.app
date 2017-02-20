@@ -1,12 +1,23 @@
+.container {
+  width: 90%;
+}
 form {
+  align-items: center;
   display: flex;
-  width: 90vw;
+  width: 100%;
 }
 input.form-control {
   display: inherit;
   margin: 0 10px;
-  width: 100px;
+  width: 200px;
 }
-.mem_container {
-  width: 90vw;
+.memo_container {
+  display:flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.memo_container > div {
+  min-width: 200px;
+  width: auto;
+  margin: 10px;
 }
