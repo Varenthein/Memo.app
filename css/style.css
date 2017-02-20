@@ -1,0 +1,12 @@
+form {
+  display: flex;
+  width: 90vw;
+}
+input.form-control {
+  display: inherit;
+  margin: 0 10px;
+  width: 100px;
+}
+.mem_container {
+  width: 90vw;
+}
