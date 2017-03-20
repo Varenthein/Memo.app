@@ -1,11 +1,17 @@
 .container {
   width: 90%;
 }
+
 form {
-  align-items: center;
   display: flex;
+  align-items: center;
   width: 100%;
 }
+
+form  h1 {
+  margin: 20px;
+}
+
 input.form-control {
   display: inherit;
   margin: 0 10px;
