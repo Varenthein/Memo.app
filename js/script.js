@@ -8,10 +8,13 @@ form.addEventListener('submit', (e) => {
   let desc = form.querySelector("input[name='desc']").value;
   let status = "default"; //set default class for panels
   let item = { title, desc, status};
-  notes.push(item);
-  localStorage.setItem('notes',JSON.stringify(notes)); //immediately save changes to localStrage
-  updateHTML();
-  form.reset();
+
+  if(item.title.length > 0 && item.desc.length > 0) { //check if note is not empty
+    notes.push(item);
+    localStorage.setItem('notes',JSON.stringify(notes)); //immediately save changes to localStrage
+    updateHTML();
+    form.reset();
+  }
 });
 
 memo_container.addEventListener('dblclick',(e) => {
