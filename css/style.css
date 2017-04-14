@@ -21,6 +21,7 @@ input.form-control {
   display:flex;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: flex-start;
 }
 .memo_container > div {
   min-width: 200px;
